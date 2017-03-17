@@ -1,0 +1,42 @@
+{
+  "name": "react-webpack",
+  "version": "1.0.0",
+  "description": "webpack demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "webpack-dev-server --port 8000 --devtool eval --progress --colors --hot --inline",
+    "build-before": "webpack --display-error-details --progress --colors -p",
+    "build": "webpack --config webpack.build.config.js --display-error-details --progress --colors",
+    "build-watch": "webpack --display-error-details --progress --colors --watch --debug --devtool source-map --output-pathinfo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+ 
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+
+  "author": "hjzgg",
+  
+  "devDependencies": {
+    "babel-core": "^6.3.21",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "~0.16.0",
+    "style-loader": "~0.12.3",
+    "react": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^1.0.2",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
+}
