@@ -11,14 +11,11 @@
     "build-watch": "webpack --display-error-details --progress --colors --watch --debug --devtool source-map --output-pathinfo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
- 
   "keywords": [
     "react",
     "webpack"
   ],
-
   "author": "hjzgg",
-  
   "devDependencies": {
     "babel-core": "^6.3.21",
     "babel-loader": "^6.2.4",
@@ -33,8 +30,8 @@
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
-
   "dependencies": {
+    "antd": "^2.8.2",
     "lodash": "^3.9.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
