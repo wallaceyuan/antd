@@ -4,9 +4,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleTable from './ExampleTable';
-let root = document.getElementById('app');
+import WrappedHorizontalLoginForm from './ExampleForm';
+
+let app = document.getElementById('app');
 
 ReactDOM.render
 (
-    <ExampleTable />,root
+    <WrappedHorizontalLoginForm />,app
 );

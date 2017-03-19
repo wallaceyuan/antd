@@ -3,14 +3,21 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message, Button,Dropdown,Menu ,Icon,Layout,  } from 'antd';
+import { DatePicker, message, Button,Dropdown,Menu ,Icon,Layout, Pagination,Form,Input } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const { Header, Footer, Sider, Content } = Layout;
+const FormItem = Form.item
 
 import 'antd/dist/antd.css';
 
+function showTotal(total) {
+    return `Total ${total} items`;
+}
 
+function hasErrors(fieldsError){
+    return Object.keys(fieldsError).some(field => fieldsError[field])
+}
 
 class ExampleTable extends React.Component {
     constructor(props) {
@@ -36,10 +43,9 @@ class ExampleTable extends React.Component {
                 <Menu.Item key="3">3rd item</Menu.Item>
             </Menu>
         );
-
         const size = this.state.size;
         return (
-            <div style={{ width: 800, margin: '100px auto' }}>
+            <div style={{ width:800, margin: '100px auto' }}>
                 <Menu
                     onClick={this.handleClick}
                     selectedKeys={[this.state.current]}
@@ -80,6 +86,11 @@ class ExampleTable extends React.Component {
                     </Button>
                 </Dropdown>
                 <Icon type="step-backward" />
+                <div>
+                    <Pagination size="small" total={50} />
+                    <Pagination size="small" total={50} showSizeChanger showQuickJumper />
+                    <Pagination size="small" total={50} showTotal={showTotal} />
+                </div>
                 <div style={{ marginTop: 20 }}>Date: {this.state.date.toString()}</div>
             </div>
         );
